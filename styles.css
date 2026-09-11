@@ -1120,3 +1120,75 @@ nav.footer-col {
 		height: 300px;
 	}
 }
+
+/* Promo Slider */
+.promo-slider {
+	overflow: hidden;
+	background-color: var(--black);
+}
+
+/* Four slides at 25% each. The fourth repeats the first, so the cycle can
+   end by sliding onto it and then reset to 0 on an identical frame. */
+.slider-track {
+	display: flex;
+	width: 400%;
+	animation: promo-slide 21s ease-in-out infinite;
+}
+
+.slider-track:hover {
+	animation-play-state: paused;
+}
+
+.slide {
+	flex: 0 0 25%;
+	width: 25%;
+	margin: 0;
+}
+
+.slide img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Each slide holds for 6s, then takes 0.9s to hand over to the next. */
+@keyframes promo-slide {
+
+	0%,
+	28.5% {
+		transform: translateX(0);
+	}
+
+	32.9%,
+	61.4% {
+		transform: translateX(-25%);
+	}
+
+	65.7%,
+	94.3% {
+		transform: translateX(-50%);
+	}
+
+	98.6%,
+	100% {
+		transform: translateX(-75%);
+	}
+}
+
+/* With motion reduced the slider stops moving on its own and becomes a
+   swipeable strip that snaps to one full banner at a time. */
+@media (prefers-reduced-motion: reduce) {
+	.slider-track {
+		animation: none;
+		width: 100%;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.slide {
+		flex: 0 0 100%;
+		width: 100%;
+		scroll-snap-align: start;
+	}
+}
