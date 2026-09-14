@@ -1123,26 +1123,29 @@ nav.footer-col {
 
 /* Promo Slider */
 .promo-slider {
-	overflow: hidden;
-	background-color: var(--black);
+	padding: 70px 0;
+	background-color: var(--gray-bg);
 }
 
-/* Four slides at 25% each. The fourth repeats the first, so the cycle can
-   end by sliding onto it and then reset to 0 on an identical frame. */
+/* Aligns the banner to the same grid as every other section instead of
+   bleeding to the viewport edge, which kept forcing its height. */
+.slider-frame {
+	overflow: hidden;
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
 .slider-track {
 	display: flex;
-	width: 400%;
-	animation: promo-slide 21s ease-in-out infinite;
-}
-
-.slider-track:hover {
-	animation-play-state: paused;
+	width: 300%;
+	transform: translateX(0);
+	transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .slide {
-	flex: 0 0 25%;
-	width: 25%;
-	margin: 0;
+	flex: 0 0 33.3333%;
+	width: 33.3333%;
+	display: block;
 }
 
 .slide img {
@@ -1151,44 +1154,50 @@ nav.footer-col {
 	height: auto;
 }
 
-/* Each slide holds for 6s, then takes 0.9s to hand over to the next. */
-@keyframes promo-slide {
+.slider-dots {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 22px;
+}
 
-	0%,
-	28.5% {
-		transform: translateX(0);
+.slider-dots button {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+	background-color: var(--gray-light);
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-dots button:hover {
+	background-color: var(--gray-medium);
+}
+
+.slider-dots button[aria-selected="true"] {
+	background-color: var(--red-primary);
+	transform: scale(1.35);
+}
+
+.slider-dots button:focus-visible {
+	outline: 2px solid var(--red-primary);
+	outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+	.promo-slider {
+		padding: 45px 0;
 	}
 
-	32.9%,
-	61.4% {
-		transform: translateX(-25%);
-	}
-
-	65.7%,
-	94.3% {
-		transform: translateX(-50%);
-	}
-
-	98.6%,
-	100% {
-		transform: translateX(-75%);
+	.slider-frame {
+		border-radius: 10px;
 	}
 }
 
-/* With motion reduced the slider stops moving on its own and becomes a
-   swipeable strip that snaps to one full banner at a time. */
 @media (prefers-reduced-motion: reduce) {
 	.slider-track {
-		animation: none;
-		width: 100%;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	.slide {
-		flex: 0 0 100%;
-		width: 100%;
-		scroll-snap-align: start;
+		transition: none;
 	}
 }

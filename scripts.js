@@ -166,3 +166,58 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 });
+// Promo slider: auto-advancing banner carousel with dot navigation
+const sliderTrack = document.getElementById('sliderTrack');
+const sliderDots = document.getElementById('sliderDots');
+
+if (sliderTrack && sliderDots) {
+	const slides = sliderTrack.querySelectorAll('.slide');
+	const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const HOLD = 6000;
+	let current = 0;
+	let timer = null;
+
+	const goTo = (index) => {
+		current = (index + slides.length) % slides.length;
+		sliderTrack.style.transform = `translateX(-${current * (100 / slides.length)}%)`;
+		sliderDots.querySelectorAll('button').forEach((dot, i) => {
+			dot.setAttribute('aria-selected', String(i === current));
+			dot.setAttribute('tabindex', i === current ? '0' : '-1');
+		});
+	};
+
+	const start = () => {
+		if (reduceMotion) return;
+		stop();
+		timer = setInterval(() => goTo(current + 1), HOLD);
+	};
+
+	const stop = () => {
+		if (timer) clearInterval(timer);
+		timer = null;
+	};
+
+	slides.forEach((slide, i) => {
+		const dot = document.createElement('button');
+		dot.type = 'button';
+		dot.setAttribute('role', 'tab');
+		dot.setAttribute('aria-label', `Ver promoción ${i + 1} de ${slides.length}`);
+		dot.addEventListener('click', () => {
+			goTo(i);
+			start();
+		});
+		sliderDots.appendChild(dot);
+	});
+
+	// Holding still while the visitor reads, or while the tab is hidden.
+	sliderTrack.addEventListener('mouseenter', stop);
+	sliderTrack.addEventListener('mouseleave', start);
+	sliderDots.addEventListener('mouseenter', stop);
+	sliderDots.addEventListener('mouseleave', start);
+	document.addEventListener('visibilitychange', () => {
+		document.hidden ? stop() : start();
+	});
+
+	goTo(0);
+	start();
+}
