@@ -30,9 +30,9 @@ body {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1600px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 clamp(20px, 3.5vw, 56px);
 }
 
 /* Header */
@@ -219,6 +219,7 @@ nav.footer-col {
 	color: var(--gray-medium);
 	margin-bottom: 30px;
 	line-height: 1.8;
+	max-width: 560px;
 }
 
 .hero-buttons {
@@ -297,6 +298,7 @@ nav.footer-col {
 }
 
 .hero-logo {
+	width: 100%;
 	background: linear-gradient(135deg, rgba(213, 48, 48, 0.1) 0%, var(--gray-light) 100%);
 	padding: 60px;
 	border-radius: 20px;
@@ -409,6 +411,8 @@ nav.footer-col {
 .section-header p {
 	font-size: 18px;
 	color: var(--gray-medium);
+	max-width: 720px;
+	margin: 0 auto;
 }
 
 .about-content {
@@ -462,6 +466,7 @@ nav.footer-col {
 	color: var(--gray-medium);
 	margin-bottom: 20px;
 	line-height: 1.8;
+	max-width: 640px;
 }
 
 .mission {
