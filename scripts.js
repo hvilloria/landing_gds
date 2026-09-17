@@ -67,7 +67,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.value-card, .catalog-card, .contact-card').forEach(el => {
+document.querySelectorAll('.step-card, .benefit-card, .catalog-card, .contact-card-item').forEach(el => {
 	el.style.opacity = '0';
 	el.style.transform = 'translateY(20px)';
 	el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -98,7 +98,7 @@ window.addEventListener('scroll', () => {
 // ================== WhatsApp Floating Button ==================
 (() => {
 	const PHONE = "5491162044851";
-	const DEFAULT_MESSAGE = "¡Hola! Me gustaría hacer una consulta 🙂";
+	const DEFAULT_MESSAGE = "Hola GDS Repuestos, vengo de la web y tengo una consulta.";
 
 	const btn = document.getElementById('waButton');
 	const tip = document.getElementById('waTooltip');
@@ -221,3 +221,17 @@ if (sliderTrack && sliderDots) {
 	goTo(0);
 	start();
 }
+
+// Keep the footer year current without needing a yearly edit
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Report which WhatsApp button converted. Google already counts outbound
+// clicks, but not which one, and that is the useful part.
+document.addEventListener('click', (event) => {
+	const link = event.target.closest('a[href*="wa.me"]');
+	if (!link || typeof gtag !== 'function') return;
+	gtag('event', 'whatsapp_click', {
+		origin: link.dataset.wa || 'sin-identificar'
+	});
+});

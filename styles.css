@@ -182,30 +182,20 @@ nav.footer-col {
 
 /* Hero Section */
 .hero {
-	padding: 120px 0 80px;
+	padding: 116px 0 56px;
 	background: linear-gradient(135deg, var(--gray-bg) 0%, var(--white) 100%);
 }
 
-.hero-content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 60px;
-	align-items: center;
-}
-
-.badge {
-	display: inline-block;
-	background-color: rgba(213, 48, 48, 0.1);
-	color: var(--red-primary);
-	padding: 8px 16px;
-	border-radius: 20px;
-	font-size: 14px;
-	font-weight: 600;
-	margin-bottom: 20px;
+.hero-intro {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 40px;
+	margin-bottom: 32px;
 }
 
 .hero-text h2 {
-	font-size: 48px;
+	font-size: 44px;
 	color: var(--black);
 	font-weight: 700;
 	line-height: 1.2;
@@ -219,20 +209,15 @@ nav.footer-col {
 .hero-text p {
 	font-size: 18px;
 	color: var(--gray-medium);
-	margin-bottom: 30px;
-	line-height: 1.8;
-	max-width: 560px;
+	line-height: 1.7;
+	max-width: 620px;
 }
 
 .hero-buttons {
 	display: flex;
 	gap: 15px;
-	margin-bottom: 40px;
 	flex-wrap: wrap;
-}
-
-.hero-buttons .btn-outline {
-	display: none;
+	flex-shrink: 0;
 }
 
 .btn {
@@ -269,137 +254,6 @@ nav.footer-col {
 	color: var(--white);
 }
 
-.stats {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
-	padding-top: 30px;
-	border-top: 1px solid var(--gray-light);
-}
-
-.stat-item {
-	text-align: center;
-}
-
-.stat-number {
-	font-size: 32px;
-	font-weight: 700;
-	color: var(--black);
-	margin-bottom: 5px;
-}
-
-.stat-label {
-	font-size: 14px;
-	color: var(--gray-medium);
-}
-
-.hero-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.hero-logo {
-	width: 100%;
-	background: linear-gradient(135deg, rgba(213, 48, 48, 0.1) 0%, var(--gray-light) 100%);
-	padding: 60px;
-	border-radius: 20px;
-	text-align: center;
-	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-}
-
-.logo-circle-large {
-	width: 170px;
-	height: 170px;
-	background-color: var(--red-logo);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--white);
-	font-weight: bold;
-	font-size: 48px;
-	margin: 0 auto 20px;
-}
-
-.logo-circle-large img {
-	width: 100%;
-	height: 100%;
-	display: block;
-	object-fit: contain;
-	padding: 17px;
-}
-
-.hero-logo-text {
-	font-size: 24px;
-	font-weight: 700;
-	color: var(--black);
-	margin-bottom: 5px;
-}
-
-.hero-logo-subtext {
-	font-size: 16px;
-	color: var(--gray-medium);
-}
-
-/* Background Image Section */
-.bg-image-section {
-	position: relative;
-	padding: 120px 0;
-	background-image: url('./crv_car_image.png');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-
-.bg-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(135deg, rgba(213, 48, 48, 0.9) 0%, rgba(26, 32, 44, 0.85) 100%);
-}
-
-.bg-content {
-	position: relative;
-	z-index: 1;
-	text-align: center;
-	color: var(--white);
-	max-width: 800px;
-	margin: 0 auto;
-}
-
-.bg-content h2 {
-	font-size: 42px;
-	font-weight: 700;
-	margin-bottom: 20px;
-	line-height: 1.3;
-}
-
-.bg-content p {
-	font-size: 20px;
-	margin-bottom: 30px;
-	opacity: 0.95;
-}
-
-.btn-white {
-	background-color: var(--white);
-	color: var(--red-primary);
-}
-
-.btn-white:hover {
-	background-color: var(--gray-light);
-	transform: translateY(-2px);
-	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-}
-
-/* About Section */
-.about {
-	padding: 80px 0;
-	background-color: var(--white);
-}
-
 .section-header {
 	text-align: center;
 	margin-bottom: 60px;
@@ -417,113 +271,6 @@ nav.footer-col {
 	color: var(--gray-medium);
 	max-width: 720px;
 	margin: 0 auto;
-}
-
-.about-content {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 60px;
-	align-items: center;
-	margin-bottom: 60px;
-}
-
-.about-image {
-	background: linear-gradient(135deg, var(--gray-bg) 0%, var(--gray-light) 100%);
-	padding: 60px;
-	border-radius: 20px;
-	text-align: center;
-}
-
-.about-years {
-	text-align: center;
-}
-
-.years-circle {
-	width: 120px;
-	height: 120px;
-	background-color: var(--red-primary);
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--white);
-	font-weight: bold;
-	font-size: 42px;
-	margin: 0 auto 15px;
-}
-
-.about-years p {
-	font-size: 20px;
-	font-weight: 600;
-	color: var(--black);
-}
-
-.about-text h3 {
-	font-size: 28px;
-	font-weight: 700;
-	color: var(--black);
-	margin-bottom: 20px;
-}
-
-.about-text p {
-	font-size: 16px;
-	color: var(--gray-medium);
-	margin-bottom: 20px;
-	line-height: 1.8;
-	max-width: 640px;
-}
-
-.mission {
-	background-color: var(--gray-bg);
-	padding: 25px;
-	border-radius: 12px;
-	margin-top: 30px;
-	border-left: 4px solid var(--red-primary);
-}
-
-.mission h4 {
-	font-size: 20px;
-	font-weight: 700;
-	color: var(--black);
-	margin-bottom: 10px;
-}
-
-.values {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 25px;
-}
-
-.value-card {
-	background-color: var(--white);
-	border: 2px solid var(--gray-light);
-	padding: 30px 20px;
-	border-radius: 12px;
-	text-align: center;
-	transition: all 0.3s ease;
-}
-
-.value-card:hover {
-	border-color: var(--red-primary);
-	transform: translateY(-5px);
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.value-icon {
-	font-size: 48px;
-	margin-bottom: 15px;
-}
-
-.value-card h4 {
-	font-size: 18px;
-	font-weight: 700;
-	color: var(--black);
-	margin-bottom: 10px;
-}
-
-.value-card p {
-	font-size: 14px;
-	color: var(--gray-medium);
 }
 
 /* Catalog Section */
@@ -1062,8 +809,6 @@ nav.footer-col {
 		display: flex;
 	}
 
-	.hero-content,
-	.about-content,
 	.catalog-content {
 		grid-template-columns: 1fr;
 	}
@@ -1072,21 +817,20 @@ nav.footer-col {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.values {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
 	.footer-content {
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	.hero-text h2 {
-		font-size: 36px;
+	.hero-intro {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
 	}
 
-	.bg-content h2 {
-		font-size: 32px;
+	.hero-text h2 {
+		font-size: 34px;
 	}
+
 
 	.section-header h2 {
 		font-size: 32px;
@@ -1103,17 +847,26 @@ nav.footer-col {
 		justify-content: center;
 	}
 
-	.stats {
-		grid-template-columns: 1fr;
+	.hero {
+		padding: 100px 0 40px;
+	}
+
+	.hero-text h2 {
+		font-size: 28px;
+	}
+
+	.hero-text p {
+		font-size: 16px;
+	}
+
+	.hero-buttons {
+		width: 100%;
 	}
 
 	.contact-grid {
 		grid-template-columns: 1fr;
 	}
 
-	.values {
-		grid-template-columns: 1fr;
-	}
 
 	.footer-content {
 		grid-template-columns: 1fr;
@@ -1132,8 +885,7 @@ nav.footer-col {
 
 /* Promo Slider */
 .promo-slider {
-	padding: 70px 0;
-	background-color: var(--gray-bg);
+	position: relative;
 }
 
 /* Aligns the banner to the same grid as every other section instead of
@@ -1196,10 +948,6 @@ nav.footer-col {
 }
 
 @media (max-width: 640px) {
-	.promo-slider {
-		padding: 45px 0;
-	}
-
 	.slider-frame {
 		border-radius: 10px;
 	}
@@ -1208,5 +956,174 @@ nav.footer-col {
 @media (prefers-reduced-motion: reduce) {
 	.slider-track {
 		transition: none;
+	}
+}
+
+/* Visually hidden but still read by search engines and screen readers */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Shared closing CTA so every section ends in a next step */
+.section-cta {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+/* How to ask */
+.how-to {
+	padding: 80px 0;
+	background-color: var(--white);
+}
+
+.steps {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+}
+
+.step-card {
+	position: relative;
+	background-color: var(--gray-bg);
+	border-radius: 12px;
+	padding: 32px 28px 28px;
+}
+
+.step-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: var(--red-primary);
+	color: var(--white);
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+
+.step-card h3 {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--black);
+	margin-bottom: 8px;
+}
+
+.step-card p {
+	font-size: 16px;
+	color: var(--gray-medium);
+}
+
+/* Why GDS */
+.why {
+	padding: 80px 0;
+	background-color: var(--gray-bg);
+}
+
+.benefits {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 20px;
+}
+
+.benefit-card {
+	background-color: var(--white);
+	border-left: 4px solid var(--red-primary);
+	border-radius: 10px;
+	padding: 26px 22px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-card h3 {
+	font-size: 17px;
+	font-weight: 700;
+	color: var(--black);
+	margin-bottom: 8px;
+	line-height: 1.3;
+}
+
+.benefit-card p {
+	font-size: 15px;
+	color: var(--gray-medium);
+}
+
+/* Kept after the base rules above so they win the cascade */
+@media (max-width: 1200px) {
+	.benefits {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 968px) {
+	.steps {
+		grid-template-columns: 1fr;
+	}
+
+	.benefits {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.how-to,
+	.why {
+		padding: 60px 0;
+	}
+}
+
+@media (max-width: 640px) {
+	.benefits {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Sticky WhatsApp bar. Phone only: it replaces the floating circle there,
+   which overlapped content, and repeats the main CTA within thumb reach. */
+.wa-bar {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.wa-bar {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1001;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		padding: 15px 20px;
+		padding-bottom: calc(15px + env(safe-area-inset-bottom, 0px));
+		background-color: #25D366;
+		color: var(--white);
+		font-size: 17px;
+		font-weight: 700;
+		text-decoration: none;
+		box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+	}
+
+	.wa-bar:active {
+		background-color: #1FB855;
+	}
+
+	/* The bar takes over on phones, so the circle and its tooltip step aside. */
+	.wa-float,
+	.wa-tooltip {
+		display: none !important;
+	}
+
+	body {
+		padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px));
 	}
 }
