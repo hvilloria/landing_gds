@@ -12,7 +12,7 @@
 
 	<!-- Meta Description optimizada (150-160 caracteres) -->
 	<meta name="description"
-		content="Repuestos Honda originales y alternativos en CABA. Más de 35 años de experiencia. Atención personalizada, amplio stock. Envíos a todo el país. ¡Consultá por WhatsApp!">
+		content="Repuestos Honda originales y alternativos en CABA. Te confirmamos compatibilidad antes de cotizar. Envíos a todo el país. ¡Consultá por WhatsApp!">
 
 	<!-- Keywords (aunque menos importantes hoy en día) -->
 	<meta name="keywords"
@@ -20,9 +20,9 @@
 
 	<!-- Meta Tags para Redes Sociales - Open Graph -->
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="GDS Repuestos - Honda Originales y Alternativos | 35 Años">
+	<meta property="og:title" content="GDS Repuestos - Honda Originales y Alternativos">
 	<meta property="og:description"
-		content="Repuestos Honda originales y alternativos en CABA. Más de 35 años de experiencia. Atención personalizada y stock permanente.">
+		content="Repuestos Honda originales y alternativos en CABA. Asesoramiento personalizado y envíos a todo el país.">
 	<meta property="og:url" content="https://www.gdsrepuestos.com">
 	<meta property="og:image" content="https://www.gdsrepuestos.com/images/og-image.jpg">
 	<meta property="og:locale" content="es_AR">
@@ -32,7 +32,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="GDS Repuestos - Honda Originales y Alternativos">
 	<meta name="twitter:description"
-		content="Repuestos Honda originales y alternativos en CABA. Más de 35 años de experiencia.">
+		content="Repuestos Honda originales y alternativos en CABA. Asesoramiento personalizado y envíos a todo el país.">
 	<meta name="twitter:image" content="https://www.gdsrepuestos.com/images/twitter-image.jpg">
 
 	<!-- Canonical URL -->
@@ -63,7 +63,7 @@
 		"@context": "https://schema.org",
 		"@type": "AutoPartsStore",
 		"name": "GDS Repuestos",
-		"description": "Empresa argentina especializada en repuestos Honda con más de 35 años de trayectoria",
+		"description": "Empresa argentina especializada en repuestos Honda originales y alternativos",
 		"image": "https://www.gdsrepuestos.com/logo.png",
 		"logo": "https://www.gdsrepuestos.com/logo.png",
 		"url": "https://www.gdsrepuestos.com",
@@ -87,6 +87,12 @@
 				"@type": "OpeningHoursSpecification",
 				"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
 				"opens": "09:00",
+				"closes": "12:30"
+			},
+			{
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+				"opens": "13:30",
 				"closes": "18:00"
 			},
 			{
@@ -167,7 +173,7 @@
 					"name": "¿Cómo puedo saber qué repuesto necesito para mi Honda?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "Para identificar el repuesto correcto necesitamos algunos datos de tu vehículo: modelo, año y número de chasis o VIN. Nuestro equipo cuenta con más de 35 años de experiencia en Honda y puede asesorarte telefónicamente o por WhatsApp."
+						"text": "Para identificar el repuesto correcto necesitamos algunos datos de tu vehículo: modelo, año y número de chasis o VIN. Nuestro equipo puede asesorarte telefónicamente o por WhatsApp."
 					}
 				},
 				{
@@ -183,7 +189,7 @@
 					"name": "¿Cuál es el horario de atención?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "Nuestro horario de atención en Av. Warnes 620, CABA es: Lunes a Viernes de 9:00 a 18:00hs, Sábados de 9:00 a 12:00hs. También podés consultarnos por WhatsApp al +54 9 11 3645-6900 durante el horario comercial."
+						"text": "Nuestro horario de atención en Av. Warnes 620, CABA es: lunes a viernes de 9:00 a 12:30 y de 13:30 a 18:00, y sábados de 9:00 a 12:00. También podés consultarnos por WhatsApp al +54 9 11 6204-4851 durante el horario comercial."
 					}
 				},
 				{
@@ -197,6 +203,25 @@
 			]
 		}
 		</script>
+	<!-- Google Analytics. Production domain only: preview deployments live on
+	     *.vercel.app and local work on localhost, and neither should pollute the data. -->
+	<script>
+		(function () {
+			var PRODUCTION = ['gdsrepuestos.com', 'www.gdsrepuestos.com'];
+			if (PRODUCTION.indexOf(location.hostname) === -1) return;
+
+			var tag = document.createElement('script');
+			tag.async = true;
+			tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-MZ7T4360V3';
+			document.head.appendChild(tag);
+
+			window.dataLayer = window.dataLayer || [];
+			window.gtag = function () { dataLayer.push(arguments); };
+			gtag('js', new Date());
+			gtag('config', 'G-MZ7T4360V3');
+		})();
+	</script>
+
 </head>
 
 <body>
@@ -206,18 +231,19 @@
 			<div class="header-content">
 				<div class="logo">
 					<div class="logo-circle">
-						<img src="logo.png" alt="GDS Repuestos - Repuestos Honda" width="48" height="48">
+						<img src="logo.svg" alt="GDS Repuestos - Repuestos Honda" width="48" height="48">
 					</div>
 					<div class="logo-text">
-						<h1>GDS Repuestos</h1>
+						<h1 class="sr-only">GDS Repuestos</h1>
 						<p>Repuestos Honda</p>
 					</div>
 				</div>
 				<nav id="nav" role="navigation" aria-label="Navegación principal">
-					<a href="#inicio" aria-label="Ir a inicio">Inicio</a>
-					<a href="#nosotros" aria-label="Conocer sobre nosotros">Sobre Nosotros</a>
-					<a href="#contacto" aria-label="Información de contacto">Contacto</a>
-					<a href="https://wa.me/5491162044851" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"
+					<a href="#home" aria-label="Ir a inicio">Inicio</a>
+					<a href="#how-to-ask">Cómo consultar</a>
+					<a href="#why-gds">Por qué GDS</a>
+					<a href="#contact" aria-label="Información de contacto">Contacto</a>
+					<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." class="btn-whatsapp" data-wa="header" target="_blank" rel="noopener noreferrer"
 						aria-label="Contactar por WhatsApp">WhatsApp</a>
 				</nav>
 				<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación" aria-expanded="false"
@@ -232,130 +258,54 @@
 
 	<!-- Mobile Menu -->
 	<nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú móvil">
-		<a href="#inicio">Inicio</a>
-		<a href="#nosotros">Sobre Nosotros</a>
-		<a href="#contacto">Contacto</a>
-		<a href="https://wa.me/5491162044851" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+		<a href="#home">Inicio</a>
+		<a href="#how-to-ask">Cómo consultar</a>
+		<a href="#why-gds">Por qué GDS</a>
+		<a href="#contact">Contacto</a>
+		<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." class="btn-whatsapp" data-wa="mobile-menu" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 	</nav>
 
-	<!-- Hero Section -->
-	<section id="inicio" class="hero">
+	<!-- Hero: Attention -->
+	<section id="home" class="hero">
 		<div class="container">
-			<div class="hero-content">
+			<div class="hero-intro">
 				<div class="hero-text">
-					<span class="badge">Más de 35 años de experiencia</span>
-					<h2>Repuestos Honda de <span class="text-red">Confianza</span></h2>
-					<p>Más de 35 años acompañando a nuestros clientes con repuestos de calidad para vehículos Honda.
-						Especialistas en la marca con atención personalizada y asesoramiento profesional.</p>
-					<div class="hero-buttons">
-						<a href="https://wa.me/5491136456900" class="btn btn-primary" target="_blank" rel="noopener noreferrer"
-							aria-label="Contactar por WhatsApp">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+					<h2>El repuesto correcto <span class="text-red">para tu Honda</span></h2>
+					<p>Originales y alternativos para Civic, CR-V, Fit, Accord, City, HR-V y más. Decinos qué necesitás y te
+						confirmamos compatibilidad antes de cotizar.</p>
+				</div>
+				<div class="hero-buttons">
+					<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="hero" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
 								aria-hidden="true">
 								<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
 							</svg>
-							Contactanos por WhatsApp
+						Consultar por WhatsApp
+					</a>
+					<a href="#how-to-ask" class="btn btn-outline">Cómo consultar</a>
+				</div>
+			</div>
+			<div class="promo-slider" aria-label="Promociones" aria-roledescription="carrusel">
+				<div class="slider-frame">
+					<div class="slider-track" id="sliderTrack">
+						<a class="slide" href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="banner-1" target="_blank" rel="noopener noreferrer">
+							<img src="images/banners/asset_carousel_1.jpg" alt="¿Buscás repuestos para tu Honda? Originales y alternativos en un solo lugar. Mandanos modelo, año y versión." width="1672" height="941" decoding="async">
+						</a>
+						<a class="slide" href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="banner-2" target="_blank" rel="noopener noreferrer">
+							<img src="images/banners/asset_carousel_2.jpg" alt="La pieza correcta, sin vueltas. Te ayudamos a verificar compatibilidad antes de cotizar." width="1672" height="941" decoding="async">
+						</a>
+						<a class="slide" href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="banner-3" target="_blank" rel="noopener noreferrer">
+							<img src="images/banners/asset_carousel_3.jpg" alt="¿No conseguís ese repuesto? Escribinos. Consultá por Civic, Accord, CR-V, Fit, City, HR-V y más." width="1672" height="941" decoding="async">
 						</a>
 					</div>
-					<div class="stats">
-						<div class="stat-item">
-							<div class="stat-number">35+</div>
-							<div class="stat-label">Años</div>
-						</div>
-						<div class="stat-item">
-							<div class="stat-number">5000+</div>
-							<div class="stat-label">Clientes</div>
-						</div>
-						<div class="stat-item">
-							<div class="stat-number">100%</div>
-							<div class="stat-label">Atención</div>
-						</div>
-					</div>
 				</div>
-				<div class="hero-image">
-					<div class="hero-logo">
-						<div class="logo-circle-large">
-							<img src="logo.png" alt="GDS Repuestos" width="150" height="150">
-						</div>
-						<p class="hero-logo-subtext">Especialistas en Repuestos Honda</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Background Image Section -->
-	<section class="bg-image-section" aria-label="Calidad y experiencia">
-		<div class="bg-overlay"></div>
-		<div class="container">
-			<div class="bg-content">
-				<h2>Calidad y Experiencia en Cada Repuesto</h2>
-				<p>Trabajamos exclusivamente con repuestos Honda originales y alternativos de primera calidad para
-					garantizar la durabilidad que tu vehículo necesita</p>
-				<a href="https://wa.me/5491162044851" class="btn btn-white" target="_blank" rel="noopener noreferrer">Consultar
-					Ahora</a>
-			</div>
-		</div>
-	</section>
-
-	<!-- About Section -->
-	<section id="nosotros" class="about">
-		<div class="container">
-			<div class="section-header">
-				<h2>Sobre <span class="text-red">Nosotros</span></h2>
-				<p>Una historia de dedicación y compromiso con nuestros clientes</p>
-			</div>
-			<article class="about-content">
-				<div class="about-image">
-					<div class="about-years">
-						<div class="years-circle" aria-label="35 años de trayectoria">35+</div>
-						<p>Años de Trayectoria</p>
-					</div>
-				</div>
-				<div class="about-text">
-					<h3>Nuestra Historia</h3>
-					<p>Desde hace más de 35 años, <strong class="text-red">GDS Repuestos</strong> se ha consolidado como
-						una empresa de referencia en el mercado argentino de repuestos Honda.</p>
-					<p>Comenzamos como un pequeño negocio familiar con la visión de ofrecer repuestos de calidad y un
-						servicio personalizado. Hoy, seguimos manteniendo esos valores que nos caracterizan, acompañando
-						a miles de clientes en el cuidado y mantenimiento de sus vehículos Honda.</p>
-					<p>Especializados exclusivamente en la marca <strong>Honda</strong>, contamos con un amplio stock de
-						repuestos originales y alternativos de primera calidad para todos los modelos: Civic, CR-V, Fit, Accord,
-						City, HR-V y más.</p>
-					<div class="mission">
-						<h4>Nuestra Misión</h4>
-						<p>Brindar soluciones confiables y accesibles en repuestos Honda, manteniendo la calidad y la
-							atención personalizada que nos distingue desde nuestros inicios.</p>
-					</div>
-				</div>
-			</article>
-			<div class="values">
-				<article class="value-card">
-					<div class="value-icon" aria-hidden="true">🛡️</div>
-					<h4>Confianza</h4>
-					<p>Repuestos originales Honda y de calidad garantizada</p>
-				</article>
-				<article class="value-card">
-					<div class="value-icon" aria-hidden="true">❤️</div>
-					<h4>Atención Personalizada</h4>
-					<p>Cada cliente es único y merece un trato especial</p>
-				</article>
-				<article class="value-card">
-					<div class="value-icon" aria-hidden="true">⏰</div>
-					<h4>Experiencia</h4>
-					<p>Más de 35 años especializados en Honda</p>
-				</article>
-				<article class="value-card">
-					<div class="value-icon" aria-hidden="true">✔</div>
-					<h4>Compromiso</h4>
-					<p>Soluciones rápidas y efectivas para tu Honda</p>
-				</article>
+				<div class="slider-dots" id="sliderDots" role="tablist" aria-label="Elegir promoción"></div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Catalog Section -->
-	<section id="catalogo" class="catalog">
+	<section id="catalog" class="catalog">
 		<div class="container">
 			<div class="section-header">
 				<h2>Nuestro <span class="text-red">Catálogo</span></h2>
@@ -374,7 +324,7 @@
 						<li>✔ Baterías y sistema eléctrico</li>
 						<li>✔ Accesorios originales Honda</li>
 					</ul>
-					<a href="https://wa.me/5491162044851" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+					<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="catalog-card" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
 						Consultar Catálogo
 					</a>
 				</article>
@@ -382,7 +332,7 @@
 					<h3>¿No encontrás lo que buscás?</h3>
 					<p>Contamos con un amplio stock de repuestos Honda. Consultanos por WhatsApp y te asesoramos
 						personalmente.</p>
-					<a href="https://wa.me/5491162044851" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">
+					<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="catalog-cta" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
 							aria-hidden="true">
 							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -394,69 +344,85 @@
 		</div>
 	</section>
 
-	<!-- Contact Section -->
-	<section id="contacto" class="contact">
+	<!-- How to ask: Interest -->
+	<section id="how-to-ask" class="how-to">
 		<div class="container">
 			<div class="section-header">
-				<h2><span class="text-red">Contacto</span></h2>
-				<p>Estamos para ayudarte. Contactanos por el medio que prefieras</p>
+				<h2>Cómo <span class="text-red">consultar</span></h2>
+				<p>Con estos tres datos te respondemos más rápido y sin vueltas.</p>
 			</div>
-			<div class="contact-content">
-				<!-- Grid de información de contacto -->
-				<div class="contact-grid">
-					<article class="contact-card-item">
-						<div class="contact-icon" aria-hidden="true">📍</div>
-						<h4>Dirección</h4>
-						<address style="font-style: normal;">
-							Av. Warnes 620, CABA<br>
-							Buenos Aires, Argentina
-						</address>
-					</article>
-					<article class="contact-card-item">
-						<div class="contact-icon" aria-hidden="true">📞</div>
-						<h4>Teléfono</h4>
-						<p><a href="tel:+5491148551307">+54 9 11 4855-1307</a></p>
-					</article>
-					<article class="contact-card-item">
-						<div class="contact-icon" aria-hidden="true">✉️</div>
-						<h4>Email</h4>
-						<p>
-							<a href="mailto:alfredo@gentedelsol.com">alfredo@gentedelsol.com</a>
-						</p>
-					</article>
-					<article class="contact-card-item">
-						<div class="contact-icon" aria-hidden="true">⏰</div>
-						<h4>Horario de Atención</h4>
-						<p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 12:00<br>Domingos: Cerrado</p>
-					</article>
-				</div>
+			<ol class="steps">
+				<li class="step-card">
+					<span class="step-number" aria-hidden="true">1</span>
+					<h3>Modelo y año</h3>
+					<p>Por ejemplo, Civic 2016 o CR-V 2010.</p>
+				</li>
+				<li class="step-card">
+					<span class="step-number" aria-hidden="true">2</span>
+					<h3>Número de chasis (VIN)</h3>
+					<p>Figura en la cédula del auto. Con ese dato confirmamos la versión exacta.</p>
+				</li>
+				<li class="step-card">
+					<span class="step-number" aria-hidden="true">3</span>
+					<h3>Qué repuesto buscás</h3>
+					<p>Si tenés una foto de la pieza, sumala al mensaje.</p>
+				</li>
+			</ol>
+			<div class="section-cta">
+				<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="how-to-ask" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+								aria-hidden="true">
+								<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+							</svg>
+					Escribinos por WhatsApp
+				</a>
+			</div>
+		</div>
+	</section>
 
-				<!-- Botón de WhatsApp destacado -->
-				<div class="contact-cta">
-					<a href="https://wa.me/5491162044851" class="btn btn-primary btn-large" target="_blank"
-						rel="noopener noreferrer">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-							aria-hidden="true">
-							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-						</svg>
-						Contactar por WhatsApp
-					</a>
-				</div>
-
-				<!-- Mapa -->
-				<div class="map-container-full">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1108817770723!2d-58.44759182353096!3d-34.60135755737474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca0c0fd768b1%3A0x130fb9d5c5865ebe!2sAv.%20Warnes%20620%2C%20C1414%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1763223708201!5m2!1sen!2sar"
-						width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-						referrerpolicy="no-referrer-when-downgrade"
-						title="Ubicación de GDS Repuestos en Av. Warnes 620, CABA"></iframe>
-				</div>
+	<!-- Why GDS: Desire -->
+	<section id="why-gds" class="why">
+		<div class="container">
+			<div class="section-header">
+				<h2>Por qué <span class="text-red">GDS</span></h2>
+				<p>Te ayudamos a comprar bien, no solo a comprar.</p>
+			</div>
+			<div class="benefits">
+				<article class="benefit-card">
+					<h3>Compatibilidad antes de cotizar</h3>
+					<p>Revisamos modelo, año y chasis para que la pieza encaje a la primera.</p>
+				</article>
+				<article class="benefit-card">
+					<h3>Original o alternativo</h3>
+					<p>Cuando existen las dos opciones, te las mostramos y te explicamos la diferencia.</p>
+				</article>
+				<article class="benefit-card">
+					<h3>Menos riesgo de comprar mal</h3>
+					<p>Te orientamos antes de pagar, así evitás devoluciones y tiempo perdido.</p>
+				</article>
+				<article class="benefit-card">
+					<h3>Piezas puntuales</h3>
+					<p>Además del stock habitual, consultanos por piezas difíciles o de modelos anteriores.</p>
+				</article>
+				<article class="benefit-card">
+					<h3>Envíos a todo el país</h3>
+					<p>Despachamos a toda Argentina con empresas de logística.</p>
+				</article>
+			</div>
+			<div class="section-cta">
+				<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="why-gds" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+								aria-hidden="true">
+								<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+							</svg>
+					Consultar por WhatsApp
+				</a>
 			</div>
 		</div>
 	</section>
 
 	<!-- FAQ Section -->
-	<section class="faq-section" id="preguntas-frecuentes">
+	<section class="faq-section" id="faq">
 		<div class="container">
 			<div class="section-header">
 				<h2>Preguntas <span class="text-red">Frecuentes</span></h2>
@@ -512,7 +478,7 @@
 					<div class="faq-answer">
 						<p>Para identificar el repuesto correcto necesitamos algunos datos de tu vehículo: <strong>modelo, año y
 								número de chasis o VIN</strong>. También es útil tener fotos de la pieza si es posible. Nuestro equipo
-							cuenta con más de 35 años de experiencia en Honda y puede asesorarte telefónicamente o por WhatsApp. Si no
+							puede asesorarte telefónicamente o por WhatsApp. Si no
 							estás seguro, envianos una foto y te ayudamos a identificar exactamente lo que necesitás.</p>
 					</div>
 				</article>
@@ -538,8 +504,8 @@
 						<span class="faq-icon" aria-hidden="true">+</span>
 					</button>
 					<div class="faq-answer">
-						<p>Nuestro horario de atención en <strong>Av. Warnes 620, CABA</strong> es: Lunes a Viernes de 9:00 a
-							18:00hs, Sábados de 9:00 a 12:00hs. Los domingos y feriados permanecemos cerrados. También podés
+						<p>Nuestro horario de atención en <strong>Av. Warnes 620, CABA</strong> es: lunes a viernes de 9:00 a
+							12:30 y de 13:30 a 18:00, y sábados de 9:00 a 12:00. Los domingos y feriados permanecemos cerrados. También podés
 							consultarnos por <strong>WhatsApp al +54 9 11 6204-4851</strong> durante el horario comercial. Respondemos
 							mensajes dentro de las 2 horas hábiles.</p>
 					</div>
@@ -559,28 +525,90 @@
 		</div>
 	</section>
 
+	<!-- Contact Section -->
+	<section id="contact" class="contact">
+		<div class="container">
+			<div class="section-header">
+				<h2><span class="text-red">Contacto</span></h2>
+				<p>Estamos para ayudarte. Contactanos por el medio que prefieras</p>
+			</div>
+			<div class="contact-content">
+				<!-- Grid de información de contacto -->
+				<div class="contact-grid">
+					<article class="contact-card-item">
+						<div class="contact-icon" aria-hidden="true">📍</div>
+						<h4>Dirección</h4>
+						<address style="font-style: normal;">
+							Av. Warnes 620, CABA<br>
+							Buenos Aires, Argentina
+						</address>
+					</article>
+					<article class="contact-card-item">
+						<div class="contact-icon" aria-hidden="true">📞</div>
+						<h4>Teléfono</h4>
+						<p><a href="tel:+5491148551307">+54 9 11 4855-1307</a></p>
+					</article>
+					<article class="contact-card-item">
+						<div class="contact-icon" aria-hidden="true">✉️</div>
+						<h4>Email</h4>
+						<p>
+							<a href="mailto:alfredo@gentedelsol.com">alfredo@gentedelsol.com</a>
+						</p>
+					</article>
+					<article class="contact-card-item">
+						<div class="contact-icon" aria-hidden="true">⏰</div>
+						<h4>Horario de Atención</h4>
+						<p>Lunes a viernes: 9:00 a 12:30 y 13:30 a 18:00<br>Sábados: 9:00 a 12:00<br>Domingos: cerrado</p>
+					</article>
+				</div>
+
+				<!-- Botón de WhatsApp destacado -->
+				<div class="contact-cta">
+					<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="contact" class="btn btn-primary btn-large" target="_blank"
+						rel="noopener noreferrer">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							aria-hidden="true">
+							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+						</svg>
+						Contactar por WhatsApp
+					</a>
+				</div>
+
+				<!-- Mapa -->
+				<div class="map-container-full">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1108817770723!2d-58.44759182353096!3d-34.60135755737474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca0c0fd768b1%3A0x130fb9d5c5865ebe!2sAv.%20Warnes%20620%2C%20C1414%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1763223708201!5m2!1sen!2sar"
+						width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"
+						title="Ubicación de GDS Repuestos en Av. Warnes 620, CABA"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Footer -->
 	<footer class="footer" role="contentinfo">
 		<div class="container">
 			<div class="footer-content">
 				<div class="footer-col">
 					<div class="footer-logo">
-						<div class="logo-circle"><img src="logo.png" alt="" width="48" height="48" aria-hidden="true"></div>
+						<div class="logo-circle"><img src="logo.svg" alt="" width="48" height="48" aria-hidden="true"></div>
 						<div class="logo-text">
 							<h3>GDS Repuestos</h3>
 							<p>Repuestos Honda</p>
 						</div>
 					</div>
-					<p class="footer-desc">Más de 35 años brindando soluciones confiables en repuestos Honda para toda
+					<p class="footer-desc">Repuestos Honda originales y alternativos, con asesoramiento y envíos a toda
 						Argentina.</p>
 				</div>
 				<nav class="footer-col" aria-label="Enlaces rápidos">
 					<h4>Enlaces Rápidos</h4>
 					<ul>
-						<li><a href="#inicio">Inicio</a></li>
-						<li><a href="#nosotros">Sobre Nosotros</a></li>
-						<!-- <li><a href="#catalogo">Catálogo</a></li> -->
-						<li><a href="#contacto">Contacto</a></li>
+						<li><a href="#home">Inicio</a></li>
+						<li><a href="#how-to-ask">Cómo consultar</a></li>
+						<li><a href="#why-gds">Por qué GDS</a></li>
+						<li><a href="#faq">Preguntas frecuentes</a></li>
+						<li><a href="#contact">Contacto</a></li>
 					</ul>
 				</nav>
 				<div class="footer-col">
@@ -597,20 +625,31 @@
 				<div class="footer-col">
 					<h4>Horario</h4>
 					<ul>
-						<li>Lun - Vie: 9:00 - 18:00</li>
-						<li>Sábados: 9:00 - 12:00</li>
-						<li>Domingos: Cerrado</li>
+						<li>Lunes a viernes: 9:00 a 12:30 y 13:30 a 18:00</li>
+						<li>Sábados: 9:00 a 12:00</li>
+						<li>Domingos: cerrado</li>
 					</ul>
 				</div>
 			</div>
 			<div class="footer-bottom">
-				<p>&copy; 2024 GDS Repuestos. Todos los derechos reservados.</p>
+				<p>&copy; <span id="year">2026</span> GDS Repuestos. Todos los derechos reservados.</p>
 			</div>
 		</div>
 	</footer>
 
+	<!-- Sticky WhatsApp bar: the mobile conversion CTA -->
+	<a class="wa-bar" href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="mobile-bar" target="_blank" rel="noopener noreferrer">
+		<svg viewBox="0 0 32 32" aria-hidden="true" width="22" height="22">
+			<path fill="currentColor"
+				d="M16 0C7.163 0 0 7.163 0 16c0 2.825.737 5.48 2.024 7.788L0 32l8.425-2.212A15.918 15.918 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333c-2.4 0-4.653-.637-6.6-1.75l-.473-.283-4.902 1.286 1.308-4.783-.31-.49A13.27 13.27 0 012.667 16c0-7.364 5.97-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z" />
+			<path fill="currentColor"
+				d="M23.026 19.418c-.36-.18-2.13-1.052-2.46-1.172-.33-.12-.57-.18-.81.18-.24.36-.93 1.172-1.14 1.412-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.89-1.784-1.07-.953-1.79-2.13-2-2.49-.21-.36-.022-.554.158-.733.162-.162.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.29-.7-.59-.6-.81-.61h-.69c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.55 3.89 6.18 5.46.863.373 1.537.596 2.063.762.867.275 1.656.236 2.28.143.696-.104 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" />
+		</svg>
+		<span>Consultar por WhatsApp</span>
+	</a>
+
 	<!-- Botón flotante WhatsApp -->
-	<a href="https://wa.me/5491162044851" id="waButton" class="wa-float" aria-label="Chatear por WhatsApp"
+	<a href="https://wa.me/5491162044851?text=Hola%20GDS%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="floating-button" id="waButton" class="wa-float" aria-label="Chatear por WhatsApp"
 		title="Chatear por WhatsApp" target="_blank" rel="noopener noreferrer">
 		<svg viewBox="0 0 32 32" aria-hidden="true" role="img" width="32" height="32">
 			<path fill="#FFFFFF"
