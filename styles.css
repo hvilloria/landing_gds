@@ -382,7 +382,7 @@ nav.footer-col {
 /* Grid de tarjetas de contacto */
 .contact-grid {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 25px;
 }
 
@@ -1126,4 +1126,9 @@ nav.footer-col {
 	body {
 		padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px));
 	}
+}
+
+.footer-wa-icon {
+	vertical-align: -2px;
+	margin-right: 2px;
 }
