@@ -85,7 +85,7 @@ body {
 	padding: 8px;
 }
 
-.logo-text h1 {
+.logo-text span {
 	font-size: 20px;
 	color: var(--red-primary);
 	font-weight: 700;
@@ -193,7 +193,7 @@ nav.footer-col {
 	gap: 40px;
 }
 
-.hero-text h2 {
+.hero-text h1 {
 	font-size: 44px;
 	color: var(--black);
 	font-weight: 700;
@@ -826,7 +826,7 @@ nav.footer-col {
 		gap: 24px;
 	}
 
-	.hero-text h2 {
+	.hero-text h1 {
 		font-size: 34px;
 	}
 
@@ -850,7 +850,7 @@ nav.footer-col {
 		padding: 100px 0 40px;
 	}
 
-	.hero-text h2 {
+	.hero-text h1 {
 		font-size: 28px;
 	}
 
