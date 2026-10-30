@@ -412,7 +412,7 @@ nav.footer-col {
 	margin: 0 auto 20px;
 }
 
-.contact-card-item h4 {
+.contact-card-item h3 {
 	font-size: 18px;
 	font-weight: 700;
 	color: var(--black);
@@ -736,7 +736,7 @@ nav.footer-col {
 	background-color: var(--gray-bg);
 }
 
-.faq-question h3 {
+.faq-question-text {
 	font-size: 18px;
 	font-weight: 600;
 	color: var(--black);
@@ -750,6 +750,11 @@ nav.footer-col {
 	color: var(--red-primary);
 	transition: transform 0.3s ease;
 	flex-shrink: 0;
+}
+
+/* Drawn in CSS so the "+" stays out of the question heading text */
+.faq-icon::before {
+	content: "+";
 }
 
 .faq-item.active .faq-icon {
@@ -785,7 +790,7 @@ nav.footer-col {
 		padding: 20px;
 	}
 	
-	.faq-question h3 {
+	.faq-question-text {
 		font-size: 16px;
 	}
 	
