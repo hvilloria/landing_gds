@@ -1,4 +1,4 @@
-# robots.txt para gdsrepuestos.com
+# robots.txt para tgrepuestos.com
 
 # Single-page static site: everything is crawlable.
 # Naming a crawler in its own group would make it ignore this one entirely,
@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gdsrepuestos.com/sitemap.xml
+Sitemap: https://www.tgrepuestos.com/sitemap.xml

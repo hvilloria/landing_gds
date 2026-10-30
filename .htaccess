@@ -1,4 +1,4 @@
-# .htaccess para gdsrepuestos.com
+# .htaccess para tgrepuestos.com
 # Configuración de SEO y optimización de rendimiento
 
 # ===================================
@@ -7,13 +7,13 @@
 
 RewriteEngine On
 
-# Canonical host: www.gdsrepuestos.com (matches the canonical/og:url meta tags).
+# Canonical host: www.tgrepuestos.com (matches the canonical/og:url meta tags).
 # Any other host that resolves here - the bare non-www domain, or a legacy
 # domain still pointed at this document root - is sent to the canonical one in
 # a single 301 hop. Keep this above the HTTPS rule so that redirect fixes the
 # host and the scheme together instead of chaining two redirects.
-RewriteCond %{HTTP_HOST} !^www\.gdsrepuestos\.com$ [NC]
-RewriteRule ^(.*)$ https://www.gdsrepuestos.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} !^www\.tgrepuestos\.com$ [NC]
+RewriteRule ^(.*)$ https://www.tgrepuestos.com/$1 [L,R=301]
 
 # Forzar HTTPS (SSL)
 RewriteCond %{HTTPS} off
