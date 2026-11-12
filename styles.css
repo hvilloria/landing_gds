@@ -275,7 +275,10 @@ nav.footer-col {
 /* Best sellers: product showcase with a WhatsApp price query per card */
 .best-sellers {
 	padding: 80px 0;
-	background: linear-gradient(135deg, var(--gray-bg) 0%, var(--white) 100%);
+	/* Solid tone plus a hairline so it reads apart from the hero gradient and
+	   alternates with the white "Cómo consultar" section below */
+	background-color: var(--gray-bg);
+	border-top: 1px solid var(--gray-light);
 }
 
 .products {
