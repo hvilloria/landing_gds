@@ -239,6 +239,7 @@
 				</div>
 				<nav id="nav" role="navigation" aria-label="Navegación principal">
 					<a href="#home" aria-label="Ir a inicio">Inicio</a>
+					<a href="#mas-pedido">Lo más pedido</a>
 					<a href="#how-to-ask">Cómo consultar</a>
 					<a href="#why-tg">Por qué TG</a>
 					<a href="#contact" aria-label="Información de contacto">Contacto</a>
@@ -258,6 +259,7 @@
 	<!-- Mobile Menu -->
 	<nav class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menú móvil">
 		<a href="#home">Inicio</a>
+		<a href="#mas-pedido">Lo más pedido</a>
 		<a href="#how-to-ask">Cómo consultar</a>
 		<a href="#why-tg">Por qué TG</a>
 		<a href="#contact">Contacto</a>
@@ -288,49 +290,78 @@
 		</div>
 	</section>
 
-	<!-- Catalog Section: disabled until there is a real catalog to link to. Its
-	     copy promises a full catalog the site does not have, and crawlers that
-	     skip CSS (AI bots) would still read it if it were only hidden. To bring it
-	     back, uncomment the block and drop `display: none` from .catalog in styles.css.
-	<section id="catalog" class="catalog">
+	<!-- Best sellers: a showcase of the parts that sell most at the store, not a
+	     full catalog. Each card opens WhatsApp asking for that part's price. -->
+	<section id="mas-pedido" class="best-sellers">
 		<div class="container">
 			<div class="section-header">
-				<h2>Nuestro <span class="text-red">Catálogo</span></h2>
-				<p>Descubrí nuestra amplia variedad de repuestos Honda</p>
+				<h2>Lo más <span class="text-red">pedido</span></h2>
+				<p>Los repuestos que más se llevan en el local. Consultá el precio directo por WhatsApp.</p>
 			</div>
-			<div class="catalog-content">
-				<article class="catalog-card">
-					<div class="catalog-icon" aria-hidden="true">📋</div>
-					<h3>Repuestos Honda para Todos los Modelos</h3>
-					<p>Explorá nuestro catálogo completo con todos los repuestos Honda disponibles. Encontrá exactamente
-						lo que necesitás para tu vehículo Honda.</p>
-					<ul class="catalog-features">
-						<li>✔ Repuestos originales Honda</li>
-						<li>✔ Filtros, frenos y amortiguadores</li>
-						<li>✔ Aceites y lubricantes especializados</li>
-						<li>✔ Baterías y sistema eléctrico</li>
-						<li>✔ Accesorios originales Honda</li>
-					</ul>
-					<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="catalog-card" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-						Consultar Catálogo
-					</a>
-				</article>
-				<div class="catalog-cta">
-					<h3>¿No encontrás lo que buscás?</h3>
-					<p>Contamos con un amplio stock de repuestos Honda. Consultanos por WhatsApp y te asesoramos
-						personalmente.</p>
-					<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." data-wa="catalog-cta" class="btn btn-outline-white" target="_blank" rel="noopener noreferrer">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-							aria-hidden="true">
-							<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-						</svg>
-						Consultar Disponibilidad
-					</a>
-				</div>
+			<ul class="products">
+				<li class="product-card">
+					<div class="product-image">
+						<img src="images/catalogo/filtro-aceite-motor-15400-PLM-A02.webp" alt="Filtro de aceite de motor Honda" width="600" height="600" loading="lazy" decoding="async">
+					</div>
+					<div class="product-body">
+						<span class="product-category">Filtros</span>
+						<h3 class="product-name">Filtro de aceite de motor</h3>
+						<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20acabo%20de%20ver%20el%20filtro%20de%20aceite%20de%20motor%20%2815400-PLM-A02%29%20en%20la%20web%20y%20me%20interesa%20saber%20el%20precio." data-wa="catalogo-15400-PLM-A02" class="btn btn-primary product-cta" target="_blank" rel="noopener noreferrer"
+							aria-label="Consultar precio de Filtro de aceite de motor por WhatsApp">Consultar precio</a>
+					</div>
+				</li>
+				<li class="product-card">
+					<div class="product-image">
+						<img src="images/catalogo/aceite-atf-caja-08200-9008.webp" alt="Aceite ATF de caja Honda" width="600" height="600" loading="lazy" decoding="async">
+					</div>
+					<div class="product-body">
+						<span class="product-category">Lubricantes</span>
+						<h3 class="product-name">Aceite ATF de caja</h3>
+						<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20acabo%20de%20ver%20el%20aceite%20ATF%20de%20caja%20%2808200-9008%29%20en%20la%20web%20y%20me%20interesa%20saber%20el%20precio." data-wa="catalogo-08200-9008" class="btn btn-primary product-cta" target="_blank" rel="noopener noreferrer"
+							aria-label="Consultar precio de Aceite ATF de caja por WhatsApp">Consultar precio</a>
+					</div>
+				</li>
+				<li class="product-card">
+					<div class="product-image">
+						<img src="images/catalogo/broche-paragolpes-cubre-carter-91503-SZ3-003.webp" alt="Broche paragolpes / cubre cárter Honda" width="600" height="600" loading="lazy" decoding="async">
+					</div>
+					<div class="product-body">
+						<span class="product-category">Broches</span>
+						<h3 class="product-name">Broche paragolpes / cubre cárter</h3>
+						<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20acabo%20de%20ver%20el%20broche%20paragolpes%20%2F%20cubre%20c%C3%A1rter%20%2891503-SZ3-003%29%20en%20la%20web%20y%20me%20interesa%20saber%20el%20precio." data-wa="catalogo-91503-SZ3-003" class="btn btn-primary product-cta" target="_blank" rel="noopener noreferrer"
+							aria-label="Consultar precio de Broche paragolpes / cubre cárter por WhatsApp">Consultar precio</a>
+					</div>
+				</li>
+				<li class="product-card">
+					<div class="product-image">
+						<img src="images/catalogo/broche-guardaplast-91501-S04-003.webp" alt="Broche de guardaplast Honda" width="600" height="600" loading="lazy" decoding="async">
+					</div>
+					<div class="product-body">
+						<span class="product-category">Broches</span>
+						<h3 class="product-name">Broche de guardaplast</h3>
+						<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20acabo%20de%20ver%20el%20broche%20de%20guardaplast%20%2891501-S04-003%29%20en%20la%20web%20y%20me%20interesa%20saber%20el%20precio." data-wa="catalogo-91501-S04-003" class="btn btn-primary product-cta" target="_blank" rel="noopener noreferrer"
+							aria-label="Consultar precio de Broche de guardaplast por WhatsApp">Consultar precio</a>
+					</div>
+				</li>
+				<li class="product-card">
+					<div class="product-image">
+						<img src="images/catalogo/tapa-radiador-19045-P08-013.webp" alt="Tapa de radiador Honda" width="600" height="600" loading="lazy" decoding="async">
+					</div>
+					<div class="product-body">
+						<span class="product-category">Refrigeración</span>
+						<h3 class="product-name">Tapa de radiador</h3>
+						<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20acabo%20de%20ver%20la%20tapa%20de%20radiador%20%2819045-P08-013%29%20en%20la%20web%20y%20me%20interesa%20saber%20el%20precio." data-wa="catalogo-19045-P08-013" class="btn btn-primary product-cta" target="_blank" rel="noopener noreferrer"
+							aria-label="Consultar precio de Tapa de radiador por WhatsApp">Consultar precio</a>
+					</div>
+				</li>
+			</ul>
+			<div class="section-cta">
+				<a href="https://wa.me/5491162044851?text=Hola%20TG%20Repuestos%2C%20vengo%20de%20la%20web%20y%20busco%20una%20pieza%20que%20no%20est%C3%A1%20en%20la%20lista." data-wa="catalogo-otra-pieza" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+					¿Buscás otra pieza? Consultanos
+				</a>
 			</div>
 		</div>
 	</section>
-	-->
 
 	<!-- How to ask: Interest -->
 	<section id="how-to-ask" class="how-to">
@@ -601,6 +632,7 @@
 					<h4>Enlaces Rápidos</h4>
 					<ul>
 						<li><a href="#home">Inicio</a></li>
+						<li><a href="#mas-pedido">Lo más pedido</a></li>
 						<li><a href="#how-to-ask">Cómo consultar</a></li>
 						<li><a href="#why-tg">Por qué TG</a></li>
 						<li><a href="#faq">Preguntas frecuentes</a></li>
